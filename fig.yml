@@ -1,0 +1,36 @@
+# The web environment, running PHP.
+web:
+  # Build "web" from the Dockerfile in the current directory.
+  build: .
+  # Expose the given ports to the host.
+  ports:
+    - "80:80"
+    - "3306:3306"
+  # Mount the /app directory with the current directory.
+  volumes:
+    - ./app:/app
+  # Set up "mysql" hostname to be the IP of the MySQL Database container.
+  # Name the hostname "mysql".
+  # links:
+  #   - "mysql:mysql"
+  # Register any other environment variables.
+  environment:
+    MYSQL_PASS: "1234"
+    # PDO_DRIVER: mysql
+    # PDO_HOST: mysql
+    # PDO_USER: root
+    # PDO_PASSWORD: root
+    # PDO_PORT: "3306"
+    # PDO_DBNAME: datastore
+
+# The MySQL Database environment.
+# mysql:
+#   # Use the mysql Docker image at https://registry.hub.docker.com/_/mysql/ .
+#   image: mysql
+#   # Using expose will allow connection to the port through the other containers
+#   # without exposing it to the host.
+#   expose:
+#     - "3306"
+#   environment:
+#     MYSQL_ROOT_PASSWORD: root
+#     MYSQL_DATABASE: datastore
