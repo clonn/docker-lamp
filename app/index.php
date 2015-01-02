@@ -1,7 +1,7 @@
 <?php
 
 // Get the configuration variables.
-echo "hello world - welcome php run run";
+echo "hello world - welcome php";
 
 $variables = array(
 	'driver' => 'mysql',

@@ -5,9 +5,10 @@ FROM tutum/lamp
 # CMD ["php", "-S", "0.0.0.0:80"]
 
 # EXPOSE 80 22
+# RUN rm -rf /app
+# RUN mkdir app
 EXPOSE 80 3306
-RUN rm -fr /app &&  mkdir /app
 VOLUME ["/app"]
 CMD ["/run.sh"]
-WORKDIR /app
+# WORKDIR /app
 
