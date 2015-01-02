@@ -1,6 +1,6 @@
-# PHP Fig Example
+# PHP, MySQL Fig
 
-A port of the [Fig](http://fig.sh) Quick Start example to PHP and MySQL.
+[tutum/lamp](https://registry.hub.docker.com/u/tutum/lamp/) base, update for fig usage.
 
 
 ## Why?
@@ -10,8 +10,7 @@ I wanted to learn how to use Fig, and porting the Python example to PHP and MySQ
 
 ## Usage
 
-    fig up
-
+  fig up
 
 ## Licence
 
